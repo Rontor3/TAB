@@ -1,0 +1,62 @@
+{% load static %} 
+{% static "images" as baseUrl %}
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Registeration</title>
+        <link rel="icon" href="{% static 'images/favicon.jpg.jpeg' %}" sizes="32x32" type="image/jpg">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'css\reg.css' %}">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <form action = "register" method = "post">
+
+            {% csrf_token %}
+             <div class="container">
+             <h1 style= "text-align:center">Sign Up</h1>
+             <p style= "text-align:center">Please fill this form to create an account.</p>
+             <div class="reg">
+
+            <label for="first_name"><b style= "padding:40px">First Name</b></label>
+            <input type ="text" name="first_name" , placeholder= "First Name" required><br>
+            <label for="last_name"><b style= "padding:40px">Last Name</b></label>
+            <input type ="text" name="last_name" , placeholder= "Last Name" required><br>
+            <label for="username"><b style= "padding:40px">Username</b></label>
+            <input type ="text" name="username" , placeholder= "Username" required><br>
+            <label for="Mobile Number"><b style= "padding:40px">Mobile No.</b></label>
+            <input type ="text" name="Mobile Number" , placeholder= "Mobile Number" required><br>
+            <label for="email"><b style= "padding:58px">Email</b></label>
+            <input type ="email" name="email" , placeholder= "email" required><br>
+            <label for="password"><b style= "padding:40px">Password</b></label>
+            <input type ="password" name="password1" , placeholder= "Password" required><br>
+            <label for="password2"><b style= "padding:8px">Confirm Password</b></label>
+            <input type ="password" name="password2" , placeholder= "Confirm Password" required><br>
+            </div>
+            
+            <p>By creating an account you agree to our <a href="#" style="color:rgb(0 8 255);">Terms & Privacy</a>.</p>
+           
+            
+            <button type="submit" class="signupbtn">Sign Up</button>
+            
+        <!--[if lt IE 7]>
+
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        </form>
+        <div>
+            {%for message in messages%}
+            <h3> {{message}} </h3>
+            {%endfor%}
+        </div>
+        
+    </body>
+</html>

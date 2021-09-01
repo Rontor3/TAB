@@ -1,0 +1,485 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <title>TAB Adventures</title>
+    <link rel="icon" href="{% static 'images/favicon.jpg.jpeg' %}" sizes="32x32" type="image/jpg">
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="keywords"
+        content="Road Travel web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web Designs" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!--// Meta tag Keywords -->
+
+    <!-- Recent Trips section css files-->
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}" type="text/css" media="all">
+    <link href="{% static 'css/owl.theme.css' %}" rel="stylesheet">
+    <!-- //Recent Trips section css files -->
+
+    <!-- Testimonials -->
+    <link rel="stylesheet" href="{% static 'css/flexslider.css' %}" type="text/css" media="screen" />
+    <!-- //Testimonials -->
+
+    <!-- css files -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}"> <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" /> <!-- Style-CSS -->
+    <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}"> <!-- Font-Awesome-Icons-CSS -->
+    <link rel="stylesheet" href="{% static 'css/yashu.css' %}">
+    <script src="{% static 'js/yashu.js' %}"></script>
+    <script src="{% static 'js/yash.js' %}"></script>
+    <!-- <link rel="stylesheet" href="{% static 'css/bookingstyle.css' %}"> -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Shippori+Mincho+B1&display=swap"
+        rel="stylesheet">
+    <!-- //css files -->
+
+    <!-- web-fonts -->
+    <link
+        href="//fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese"
+        rel="stylesheet">
+
+    <link
+        href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+        rel="stylesheet">
+    <!-- //web-fonts -->
+
+    <style>
+        .header {
+            background: #252525;
+            border-bottom: 1px solid #8c8585;
+            padding: 0 0em;
+            position: static;
+            width: 100%;
+        
+        }
+         body{
+            background: url('/static/images/bcck.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+         * {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  margin-left: 45px;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 60px;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 10px 16px;
+  color: white;
+
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+.responsive {
+  width: 90%;
+  max-width: 100%;
+  height: 400px;
+  margin-left: 5%;
+}
+
+  
+  .para p{
+    font-size: 1.7rem;
+  }
+  @media(max-width: 667px){
+      .responsive{
+          height:300px;
+      }
+  }
+  @media(max-width: 500px){
+      .responsive{
+          height:250px;
+      }
+  }
+  @media(max-width: 400px){
+      .responsive{
+          height:200px;
+      }
+  }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <nav class="navbar navbar-default">
+            <div class="left">
+                <img src="{% static 'images/icon3.jpeg' %}" alt="logo" href="#about">
+            </div>
+            
+
+            
+            <!-- navbar-header -->
+            
+                <ul class="apna">
+
+                    <li><a href="okok" class="hvr-underline-from-center scroll">Home</a></li>
+                    <li><a href="entry/about" class="hvr-underline-from-center scroll">About</a></li>
+
+
+
+                    
+                    
+
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+
+
+        </nav>
+    </div>
+    <div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+    <img src="{% static 'images/b.jpg' %}" class="responsive">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="{% static 'images/b1.jpg' %}" class="responsive">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="{% static 'images/b2.jpg' %}" class="responsive">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="{% static 'images/bg.jpg' %}" class="responsive">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="{% static 'images/bg4.jpg' %}" class="responsive">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="{% static 'images/bg5.jpg' %}" class="responsive">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p>Welcome to Goa</p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="{% static 'images/b.jpg' %}" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{% static 'images/b1.jpg' %}" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{% static 'images/b2.jpg' %}" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{% static 'images/bg.jpg' %}" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{% static 'images/bg4.jpg' %}" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="{% static 'images/bg5.jpg' %}" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+    </div>
+  </div>
+  <script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+</div>
+    <div class="para">
+        <p>
+          Goa is one of India’s top holiday destinations and it’s easy to see why. There’s so much this state is famous for that you’ll
+          be spoilt for choice when you’re visiting. From shopping at the various markets, to eating the local cuisine and water sports galore.
+           
+        </p>
+    </div>
+    <div class="widge">
+        <h2>Your <strong>Plans</strong></h2><br>
+
+    </div>
+    <div class="tab">
+        <button class="tablinks" onclick="opentype(event, 'London')"  id="defaultOpen">BASIC</button>
+        <button class="tablinks" onclick="opentype(event, 'Paris')" id="defaultOp">TRAVEL</button>
+      
+      </div><br>
+    <div id="London" class="tabcontent">
+        <form  method = "post">
+            {% csrf_token %}
+            <div class="conto">
+             
+            <label for="name"><b style= "padding:63px">Name</b></label>
+            <input type ="text" name="name" , placeholder= "Name"required><br>
+            <label for="number"><b style= "padding:24px">WhatsApp No.</b></label>
+            <input type ="number" name="number" , placeholder= "Number"required><br>
+            <label for="days"><b style= "padding:39px">No.Of Days</b></label>
+            <input type ="number" name="days" , placeholder= "Days"required><br>
+            <label for="date"><b style= "padding:20px">Departure Date</b></label>
+            <input type ="date" name="date" , placeholder= "Date"required><br>
+            <label for="origin"><b style= "padding:62px">Origin</b></label>
+            <input type ="text" name="origin" , placeholder= "Starting Place"required><br>
+             <label for="traveller"><b style= "padding:16px">No. of Travellers</b></label>
+            <input type ="number" name="traveller" , placeholder= "No. of Travellers"required><br>
+            <label for="proof"><b style= "padding:54px">ID Proof</b></label>
+            <input type="file" id="proof" name="proof" accept="image/*"required>
+            <label for="budget"><b style= "padding:22px">Approx. Budget</b></label>
+            <input type ="text" name="budget" , placeholder= "Budget" required><br>
+        </form>    
+            <!-- <a href="#Paris" class="butt">
+                <input type="submit"/>
+               </a> -->
+               <!-- <input type="submit" class="butt"  value="Submit" >  -->
+            <input type="submit" class="butt"  value="Submit"  > 
+            <br>
+            </div>
+            <div class="nam">
+    
+                <h3>Hey, {{user.first_name}}</h3>
+                
+            </div>
+            
+
+    </div>
+    
+    
+    <div id="Paris" class="tabcontent">
+        <div class="clss">
+            <h3>Let Your Choices be your Destiny!</h3>
+        </div>
+        <form  method = "post">
+          {% csrf_token %}
+          <div class="class">
+            <h3>TRAVEL</h3>
+            
+            
+             <h4 class="text">Mode Of Travel :</h4>
+            {% for dest in mode_of_travel %}
+            <input class="checkbox-tools" type="radio" id="{{dest.mot}}" name="travel" value="{{dest.mot}}" >
+            <label for="{{dest.mot}}">{{dest.mot}}</label>
+            {% endfor %}
+            <br>
+            <h4 class="text">If CAB? Explore route :</h4>
+            {% for dest in explore_route %}
+            <input class="checkbox-tools" type="radio" id="{{dest.er}}" name="cab explo" value="{{dest.er}}" >
+            <label for="{{dest.er}}">{{dest.er}}</label>
+            {% endfor %}
+            <br>
+
+            <h4 class="text">Destination Tour :</h4>
+            {% for dest in Destination_tour %}
+            <input class="checkbox-tools" type="radio" id="{{dest.dt}}" name="dest tour" value="{{dest.dt}}" >
+            <label for="{{dest.dt}}">{{dest.dt}}</label>
+            {% endfor %}
+            <br>
+          
+
+
+            <h3>HOTEL</h3>
+            <h4 class="text">Type Of Hotel :</h4>
+            {% for dest in type_hotel %}
+            <input class="checkbox-tools" type="radio" id="{{dest.th}}" name="hotel" value="{{dest.th}}" >
+            <label for="{{dest.th}}">{{dest.th}}</label>
+            {% endfor %}
+            <br>
+            <h4>Hotel Location in Destination:</h4>
+            {% for dest in location_destination %}
+            <input class="checkbox-tools" type="radio" id="{{dest.ld}}" name="locationdestination" value="{{dest.ld}}" >
+            <label for="{{dest.ld}}">{{dest.ld}}</label>
+            {% endfor %}
+            <br>
+            <br>
+            <h3>Activities</h3>
+            <h4 class="text">Type Of Activities :</h4>
+            {% for Acti in Activities %}
+            <input class="checkbox-tool" type="checkbox" id="{{Acti.activity}}" name="activities" value="{{Acti.activity}}" >
+            <label for="{{Acti.activity}}">{{Acti.activity}}</label>
+            {% endfor %}
+            <br>
+        </form>    
+            {% comment %} <input type="text" class="te" placeholder="other.." name="other activities"> {% endcomment %}
+            <button type="submit" onclick="myFunc()" id="myBtn" class="but" >SUBMIT</button>
+            <h4 style="text-align:center;padding-top:10px;">(Double click Please!)</h4>
+            <!-- <button type="button" onclick="myFunc()" id="myBtn" class="but"  value="Submit" >  -->
+          </div>
+  
+    <!-- <input type="button" class="but" id="myBtn" onclick="myFunc()" value="Submit" > -->
+    
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    
+    <h3>Thank You!!</h3>
+    <p>You will soon get a confirmation message on your WhatsApp No.</p><br>
+    <a  href="mail" type="button" class="button1">Exit</a>
+  </div>
+
+</div>
+
+
+
+        </div>
+
+
+
+
+
+    </div>
+    
+    <script>
+    {% if a is True%}
+        document.getElementById("defaultOpen").click();
+    {% else %} 
+         document.getElementById("defaultOp").click();   
+    {% endif %}     
+    </script>
+    
+
+
+
+    </body>
+</html>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

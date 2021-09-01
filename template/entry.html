@@ -1,0 +1,285 @@
+
+{% load static %}
+{% static "images" as baseUrl %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <title>TAB Adventures</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(doument).ready(function(){
+            $('.checkactivities').each(function(){
+                var txt="";
+                $('.checkactivities:checked').each(function(){
+                    txt+=$(this).val()+","
+                });
+                $('#checkactivitiy').val(txt);
+            })
+        })
+    </script>
+    <link rel="icon" href="{% static 'images/favicon.jpg.jpeg' %}" sizes="32x32" type="image/jpg">
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="keywords"
+        content="Road Travel web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web Designs" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!--// Meta tag Keywords -->
+    <!-- Recent Trips section css files-->
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}" type="text/css" media="all">
+    <link href="{% static 'css/owl.theme.css' %}" rel="stylesheet">
+    <!-- //Recent Trips section css files -->
+
+    <!-- Testimonials -->
+    <link rel="stylesheet" href="{% static 'css/flexslider.css' %}" type="text/css" media="screen" />
+    <!-- //Testimonials -->
+
+    <!-- css files -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}"> <!-- Bootstrap-Core-CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css" media="all" /> <!-- Style-CSS -->
+    <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}"> <!-- Font-Awesome-Icons-CSS -->
+    <link rel="stylesheet" href="{% static 'css/yashu.css' %}">
+    <script src="{% static 'js/yashu.js' %}"></script>
+    <script src="{% static 'js/yash.js' %}"></script>
+    <!-- <link rel="stylesheet" href="{% static 'css/bookingstyle.css' %}"> -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Shippori+Mincho+B1&display=swap"
+        rel="stylesheet">
+    <!-- //css files -->
+
+    <!-- web-fonts -->
+    <link
+        href="//fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese"
+        rel="stylesheet">
+
+    <link
+        href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+        rel="stylesheet">
+    <!-- //web-fonts -->
+
+    <style>
+        .header {
+            background: #252525;
+            border-bottom: 1px solid #8c8585;
+            padding: 0 0em;
+            position: static;
+            width: 100%;
+        }
+        body{
+            background: url('/static/images/back.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <nav class="navbar navbar-default">
+            <div class="left">
+                <img src="{%static 'images/icon3.jpeg' %}" alt="logo" href="#about">
+            </div>
+            
+
+            
+            <!-- navbar-header -->
+            
+                <ul class="apna">
+
+                    <li><a href="okok" class="hvr-underline-from-center scroll">Home</a></li>
+                    <li><a href="entry/about" class="hvr-underline-from-center scroll">About</a></li>
+
+
+
+                    
+                    
+
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+
+
+        </nav>
+    </div>
+    
+    <div class="widge">
+        <h2>Your <strong>Plans</strong></h2><br>
+
+    </div>
+    <div class="tab">
+        <button class="tablinks" onclick="opentype(event, 'London')"  id="defaultOpen">BASIC</button>
+         <button class="tablinks" onclick="opentype(event, 'Paris')">TRAVEL</button> 
+      </div><br>
+    <div id="London" class="tabcontent">
+        <form action = "register" method = "post">
+
+            {% csrf_token %}
+            <div class="conto">
+             
+            <label for="name"><b style= "padding:63px">Name</b></label>
+            <input type ="text" name="name" , placeholder= "Name" required><br>
+            <label for="number"><b style= "padding:24px">WhatsApp No.</b></label>
+            <input type ="number" name="number" , placeholder= "Number" required><br>
+            <label for="days"><b style= "padding:39px">No.Of Days</b></label>
+            <input type ="number" name="days" , placeholder= "Days" required><br>
+            <label for="date"><b style= "padding:20px">Departure Date</b></label>
+            <input type ="date" name="date" , placeholder= "Date" required><br>
+            <label for="origin"><b style= "padding:62px">Origin</b></label>
+            <input type ="text" name="origin" , placeholder= "Starting Place" required><br>
+            <label for="Destination"><b style= "padding:40px">Destination</b></label>
+            <input type ="text" name="Destination" , placeholder= "Destination" required><br>
+            <label for="proof"><b style= "padding:54px">ID Proof</b></label>
+            <input type="file" id="proof" name="proof" accept="image/*" required>
+            <label for="budget"><b style= "padding:22px">Approx. Budget</b></label>
+            <input type ="text" name="budget" , placeholder= "Budget" required><br>
+            <label for="traveller"><b style= "padding:16px">No. of Travellers</b></label>
+            <input type ="number" name="traveller" , placeholder= "No. of Travellers" required><br>
+            <!-- <a href="#Paris" class="butt">
+                <input type="submit"/>
+               </a> -->
+               <!-- <input type="submit" class="butt"  value="Submit" >  -->
+            <input type="submit" class="butt"  value="Submit" > 
+            <br>
+            </div>
+            <div class="nam">
+    
+                <h3>Hey, {{user.first_name}}</h3>
+                
+                </div>
+
+    </div>
+    
+    
+    <div id="Paris" class="tabcontent">
+        <div class="clss">
+            <h3>Let Your Choices be your Destiny!</h3>
+        </div>
+        <div class="class">
+            <h3>TRAVEL</h3>
+            
+            
+            <h4 class="text">Mode Of Travel :</h4>
+            {% for dest in mode_of_travel %}
+            <input class="checkbox-tools" type="radio" id="{{dest}}" name="travel" value="{{dest}}" >
+            <label for="{{dest}}">{{dest}}</label>
+            {% endfor %}
+            <br>
+            <h4 class="text">If CAB? Explore route :</h4>
+            {% for dest in explore_route %}
+            <input class="checkbox-tools" type="radio" id="{{dest}}" name="cab explo" value="{{dest}}" >
+            <label for="{{dest}}">{{dest}}</label>
+            {% endfor %}
+            <br>br>
+
+            <h4 class="text">Destination Tour :</h4>
+            {% for dest in Destination_tour %}
+            <input class="checkbox-tools" type="radio" id="{{dest}}" name=" dest tour" value="{{dest}}" >
+            <label for="{{dest}}">{{dest}}</label>
+            {% endfor %}
+            <br>
+            <hr style="border-top: 2px dotted white;">
+
+
+            <h3>HOTEL</h3>
+            <h4 class="text">Type Of Hotel :</h4>
+            {% for dest in type_hotel %}
+            <input class="checkbox-tools" type="radio" id="{{dest}}" name="hotel" value="{{dest}}" >
+            <label for="{{dest}}">{{dest}}</label>
+            {% endfor %}
+            <br>
+            <h4>Hotel Location in Destination:</h4>
+            {% for dest in  %}
+            <input class="checkbox-tools" type="radio" id="{{dest}}" name="hotel" value="{{dest}}" >
+            <label for="{{dest}}">{{dest}}</label>
+            {% endfor %}
+            <br>
+
+            <h3>Activities</h3>
+            <h4 class="text">Type Of Activities :</h4>
+            <input class="checkbox-tool" type="checkbox" id="adv" name="activities" value="near beach" >
+            <label for="adv">Adventures</label>
+            <input class="checkbox-tool" type="checkbox" id="night" name="activities" value="nightclub" >
+            <label for="night">Trekking</label>
+            <input class="checkbox-tool" type="checkbox" id="Water" name="activities" value="waterfall" >
+            <label for="water">Waterfall</label>
+            <input class="checkbox-tool" type="checkbox" id="history" name="activities" value="historic" >
+            <label for="history">Camping</label>
+            <input class="checkbox-tool" type="checkbox" id="sun" name="activities" value="sun" >
+            <label for="sun">Sunset</label>
+            <input class="checkbox-tool" type="checkbox" id="beach" name="activities" value="near beach" >
+            <label for="beach">BEACH</label>
+            <input class="checkbox-tool" type="checkbox" id="beach" name="activities" value="near beach" >
+            <label for="beach">BEACH</label>
+            <input class="checkbox-tool" type="checkbox" id="beach" name="activities" value="near beach" >
+            <label for="beach">BEACH</label><br>
+            <input type="text" name="Activties" id="checkactivitiy" size="100"><br>
+            <button type="button" onclick="myFunc()" id="myBtn" class="but" >SUBMIT</button>
+            <h4 style="text-align:center;padding-top:10px;">(Double click Please!)</h4>
+             {% comment %} <button type="button" onclick="myFunc()" id="myBtn" class="but"  value="Submit" > {% endcomment %}
+   
+    {% comment %} <input type="button" class="but" id="myBtn" onclick="myFunc()" value="Submit" >  {% endcomment %}
+     
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    
+    <h3>Thank You!!</h3>
+    <p>You will soon get a confirmation message on your WhatsApp No.</p><br>
+    <a  href="okok" type="button" class="button1">Exit</a>
+  </div>
+
+</div>
+
+
+
+        </div>
+
+
+
+
+
+    </div>
+    
+    <script>
+        document.getElementById("defaultOpen").click();
+    </script>
+    
+
+
+
+    </body>
+</html>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

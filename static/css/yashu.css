@@ -1,0 +1,365 @@
+
+.contain{
+    text-align: center;
+    color: black;
+    padding:15px;}
+.contain h3{
+    font-size: 2em;
+}
+.row{
+    display: flex;
+}
+.column{
+    flex:33.33%;
+    padding: 5px;
+}
+.column img {
+    width:100%;
+    height:100%;
+}
+
+.para p{
+float: left;
+margin:2% 10%;
+color:rgb(255, 0, 0);
+line-height: 30px;
+letter-spacing: 0.9px;
+font-size: medium;
+text-decoration: bold;
+
+
+}
+
+.widge h2{
+    text-align: center;
+    letter-spacing: 2px;
+    padding-top: 10px;
+    
+}
+
+
+.widge h2:after {
+    border-top: 2px solid #6d8005;
+    display: block;
+    width: 81px;
+    content: "";
+    margin: 8px auto 0;
+}
+/* .widge1{
+  background: url('/static/images/back.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+.tab {
+  overflow: hidden;
+  /* border: 1px solid #cccccc; */
+  /* background-color: rgb(161, 171, 172); */
+  /* position: absolute; */
+  /* margin-left: 30%; */
+  max-width: 270px;
+  margin: auto;
+  }
+.butt{
+      background-color: rgb(49, 168, 189);
+      cursor: pointer;
+      padding: 11px 32px;
+      border-radius: 4px;
+  }
+  .tab button {
+    background-color: rgb(48, 42, 42);
+    float: left;
+    border: 2px solid black;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 18px;
+    transition: 0.3s;
+    font-size: 19px;
+    position: relative;
+    margin-left: 23px;
+    color:white;
+  }
+  .apna{
+      margin-left: 26%;
+      text-decoration: none;
+      list-style: none;
+      display: flex;
+      
+  }
+  .apna li{
+    
+    padding: 14px 0px 0px 63px;
+    font-size: 20px;
+}
+  
+
+  
+  .apna li a{
+    color:white;
+  }
+  
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #ddd;
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: rgb(194, 57, 57);
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    /* border: 1px solid #ccc; */
+    border-top: none;
+  }
+  [type="checkbox"] ,[type="radio"]{
+    position: absolute;
+    visibility: hidden;
+    
+    
+  }
+
+
+
+    body {font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    background-color: rgb(161, 171, 172);
+}
+
+/* Full-width input fields */
+    .conto input[type=text], input[type=password], input[type=email] , input[type=number], input[type=file] ,input[type=date]  {
+    width: 270px;
+    
+    padding: 7px;
+    margin: -2px 2px 22px 0;
+    display: inline-block;
+    border: 3px solid #ccc;
+    background: white;
+    border-radius: 4px;
+    
+}
+.contoinput::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.conto label{
+    color:black;
+    font-size: 20px;
+}
+
+    .conto button {
+    background-color: blue ;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    opacity: 0.9;
+}
+.conto{
+  padding: 20px;
+  text-align :center;
+  margin: 6% 50px;
+  /* border: 2px solid black; */
+  max-width: 600px;
+  margin: auto;
+  /* background-color: gray; */
+ 
+}
+.nam h3{
+    text-align: center;
+    color: black;
+    font-family: 'Permanent Marker', cursive;
+}
+.clss h3{
+  text-align: center;
+  font-size:4.3vw;
+  margin: auto;
+  padding-bottom: 30px;
+
+
+}
+.class {
+  padding: 20px;
+  /* background-image: url(/static/images/sky.jpg); */
+  margin: 6% 50px;
+  /* border: 1px solid black; */
+  max-width: 90%;
+  font-size: 13px;
+  margin: auto;
+  /* background-color: white; */
+}
+
+.class h3{
+  text-align: center;
+  text-decoration: underline ;
+ 
+}
+
+
+.text  {
+  margin: 13px 0 15px 0px;
+  font-size:1.3em;
+
+}
+
+.checkbox-tools + label{
+  position: relative;
+    display: inline-block;
+    padding: 9px;
+    /* width: 107px; */
+    font-size: 1.2em;
+    line-height: 16px;
+    letter-spacing: 1px;
+    margin: 0 auto;
+    margin-left: 2%;
+    margin-right: 0px;
+    margin-bottom: 4px;
+    
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: red;
+    background-color: rgb(235, 224, 224);
+    box-shadow: 5px 5px red;
+   
+}
+.checkbox-tools:checked + label{
+  background-color: rgb(36, 177, 219);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+.checkbox-tools + label:hover{
+  background-color: rgb(168, 179, 122);}
+
+  .checkbox-tool + label{
+    position: relative;
+      display: inline-block;
+      padding: 9px;
+      /* width: 107px; */
+      font-size: 1em;
+      line-height: 16px;
+      letter-spacing: 1px;
+      margin: 0 auto;
+      margin-left: 2%;
+      margin-right: 0px;
+      margin-bottom: 4px;
+      
+      border-radius: 4px;
+      overflow: hidden;
+      cursor: pointer;
+      text-transform: uppercase;
+      color: red;
+      background-color: rgb(235, 224, 224);
+      box-shadow: 5px 5px gray;
+     
+  }
+  .checkbox-tool:checked + label{
+    background-color: rgb(36, 177, 219);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  }
+  .checkbox-tool+ label:hover{
+    background-color: rgb(168, 179, 122);}
+
+
+.but{
+  background-color: rgb(49, 168, 189);
+    cursor: pointer;
+    padding: 13px 32px;
+    position: relative;
+    margin-top: 25px;
+    margin-left: 44%;
+    font-size: 20px;
+    border-radius: 4px;
+    justify-content: center;
+  }
+
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 75%;
+    text-align: center;
+  }
+  .modal-content p{
+    color:black;
+    text-decoration: bold;
+    font-size:1.3em;
+
+  }
+  .modal-content p{
+    color:green;
+
+  }
+  .button1{
+    background-color: red;
+    /* width: 46px; */
+    /* height: 37px; */
+    font-size: 21px;
+    border: 3px solid black;
+    border-radius: 3px;
+    color: black;
+}
+  
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .tex{
+    width: 130px;
+    height: 37px;
+    margin: 14px;
+  }
+  .te{
+    width: 130px;
+    height: 37px;
+    margin: 14px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

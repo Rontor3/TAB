@@ -1,0 +1,34 @@
+body {font-family: Arial, Helvetica, sans-serif;
+    background: url('/static/images/register1.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: 'Baloo Bhai 2', cursive;}
+    
+
+/* Full-width input fields */
+     input[type=text], input[type=password], input[type=email] {
+    width: 210px;
+    padding: 15px;
+    margin: 5px 2 22px 0;
+    display: inline-block;
+    border: 2px solid #ccc;
+    background: white;
+    margin-top: 9px;
+}
+    button {
+    background-color: blue ;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer; 
+    /*width: 20%;*/
+    opacity: 0.9;
+}
+label{
+    padding: 3px;
+}
+.container {
+    margin-top: 100px;
+  text-align :center;
+}
